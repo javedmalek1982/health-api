@@ -16,6 +16,14 @@ app.get('/health', (req, res) => {
   });
 });
 
+
+app.get('/info', (req, res) => {
+  res.json({
+    name: 'health-api',
+    description: 'A health check API with automated container publishing'
+  });
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Health API running on port ${PORT}`);
